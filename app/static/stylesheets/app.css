@@ -1,0 +1,159 @@
+.flash-error {
+  width:100%;
+  margin:0 auto;
+  border:2px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#D4D4D4;
+  margin-bottom:5px;
+  padding-left:5px;
+  color:red;
+  font-size:larger;
+}
+.flash-success {
+  width:100%;
+  margin:0 auto;
+  border:2px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#D4D4D4;
+  margin-bottom:5px;
+  padding-left:5px;
+  color:green;
+  font-size:larger;
+}
+
+.page {
+  width:95%;
+  margin:0 auto;
+}
+
+.content-top {
+  border:1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#D1D1D1;
+  width:100%;
+  clear:both;
+  height:150px;
+  margin: 0 auto;
+  margin-bottom:1%;
+}
+
+.top-item {
+  text-align: center;
+  border:0px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /*border-color:#CCFFFF;*/
+  float:left;
+  width:33%;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: left;
+  border:1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#D1D1D1;
+  padding-top:1%;
+  margin-top:5%;
+  margin: 0 auto;
+}
+
+.input-line {
+  text-align: left;
+  width:100%;
+  float:left;
+  clear:both;
+}
+.label-item {
+  font-weight:bold;
+  width:30%;
+  float:left;
+  margin-left:2%;
+}
+.text-item {
+  width:65%;
+  float:left;
+  margin-left:2%;
+}
+
+/* posts */
+
+.post-line {
+  text-align: left;
+  width:100%;
+  float:left;
+  clear:both;
+  margin-bottom:5px;
+  border:1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#CCFFFF;
+}
+.post-item {
+  width:95%;
+  float:left;
+  border:0px dotted;
+  margin-left:2.5%;
+  margin-bottom:2px;
+}
+.post-date {
+  width:10%;
+  float:left;
+  border:0px dotted;
+  font-size:larger;
+}
+.post-name {
+  width:90%;
+  float:left;
+  border:0px dotted;
+}
+.post-author {
+  float:left;
+  border:0px dotted;
+  font-size:smaller;
+}
+.post-link {
+  margin-left:2%;
+  float:left;
+  border:0px dotted;
+  font-size:smaller;
+}
+.post-timestamp {
+  float:right;
+  border:0px dotted;
+  color:#ADADAD;
+  font-size:smaller;
+}
+
+/* comments */
+.vote-big {
+  float:left;
+  width:5%;
+  border:0px dotted;
+  margin-left:1px;
+  display:block;
+}
+
+.vote-small {
+
+}
+
+.vote-up{
+  float:left;
+  width:100%;
+}
+.vote-down{
+  float:left;
+  width:100%;
+  margin-left:1px;
+}

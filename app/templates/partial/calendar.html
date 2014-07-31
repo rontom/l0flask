@@ -1,0 +1,39 @@
+
+<div id="btn-calendar" class="btn-calendar"></div>
+
+<div id="date_time" class="date_time">
+  <div id="day_name"></div>
+  <div id="day_number"></div>
+  <div id="month_name"></div>
+</div>
+
+<div id="cal-container" class="cal-container">
+  <div class="devcal">
+  <script type="text/template" id="template-calendar">
+    <div class="clndr-controls">
+      <div class="clndr-previous-button"><strong>&lsaquo;--</strong></div>
+      <div class="month"><%= month %></div>
+      <div class="clndr-next-button"><strong>--&rsaquo;</strong></div>
+    </div>
+    <div class="clndr-grid">
+      <div class="days-of-the-week">
+        <% _.each(daysOfTheWeek, function(day) { %>
+          <div class="header-day"><%= day %></div>
+        <% }); %>
+        </br>
+        <div class="days">
+          <% 
+          _.each(days, function(day) { 
+          %>
+            <div class="<%= day.classes %>"><%= day.day %></div>
+          <% 
+          }); 
+          %>
+        </div>
+      </div>
+    </div>
+    <div class="clndr-today-button" id="btn-today">今天</div>
+  </script>
+  </div>
+</div>
+

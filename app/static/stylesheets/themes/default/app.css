@@ -1,0 +1,217 @@
+
+.page {
+  width:95%;
+  margin:0 auto;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Cantarell', sans-serif;
+}
+
+.head_img {
+  height:120px;
+  width:100%;
+  margin-top:2%;
+  padding-top:2%;
+  padding-left:5%;
+  padding-right:5%;
+}
+
+.flash-error {
+  width:100%;
+  margin:0 auto;
+  border:2px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#D4D4D4;
+  margin-bottom:5px;
+  padding-left:5px;
+  color:red;
+  font-size:larger;
+}
+.flash-success {
+  width:100%;
+  margin:0 auto;
+  border:2px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#D4D4D4;
+  margin-bottom:5px;
+  padding-left:5px;
+  color:green;
+  font-size:larger;
+}
+
+.content-top {
+  border:1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#D1D1D1;
+  width:100%;
+  clear:both;
+  height:150px;
+  margin: 0 auto;
+  margin-bottom:1%;
+}
+
+.top-item {
+  text-align: center;
+  border:0px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /*border-color:#CCFFFF;*/
+  float:left;
+  width:33%;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: left;
+  border:1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#D1D1D1;
+  margin: 0 auto;
+}
+
+.input-line {
+  text-align: left;
+  width:100%;
+  float:left;
+  clear:both;
+  margin-bottom:0%;
+}
+.label-item {
+  font-weight:bold;
+  width:30%;
+  float:left;
+  margin-left:2%;
+}
+.text-item {
+  width:65%;
+  float:left;
+  margin-left:2%;
+}
+
+/* posts */
+
+.post-line {
+  text-align: left;
+  width:100%;
+  float:left;
+  clear:both;
+  margin-bottom:5px;
+  border:1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color:#CCFFFF;
+}
+.post-item {
+  width:100%;
+  float:left;
+  padding-left:2.5%;
+  margin-bottom:2px;
+}
+.post-date {
+  margin-right:2%;
+  float:left;
+  font-size:larger;
+  font-weight:bold;
+}
+.post-name {
+  float:left;
+  border:0px dotted;
+}
+.post-author {
+  margin-right:2%;
+  float:left;
+  font-size:smaller;
+}
+.post-link {
+  float:left;
+  font-size:smaller;
+}
+.post-timestamp {
+  float:right;
+  color:#ADADAD;
+  font-size:smaller;
+}
+
+/* votes */
+
+/* regular vote */
+.vote-big {
+  float:left;
+  width:3%;
+  border:0px dotted;
+  margin-left:1px;
+}
+.vote-up{
+  float:left;
+  width:100%;
+  height:50%;
+}
+.vote-down{
+  float:left;
+  width:100%;
+  height:50%;
+  margin-left:0.5px;
+}
+.vote-up:hover{
+  cursor:pointer;
+  text-decoration:none;
+  color:green;
+}
+.vote-down:hover{
+  cursor:pointer;
+  text-decoration:none;
+  color:red;
+}
+
+/* small vote */
+.vote-small {
+  float:left;
+  width:3%;
+  border:0px dotted;
+  margin-left:1px;
+  height:30px;
+}
+.vote-up-small{
+  float:left;
+  width:100%;
+  height:50%;
+}
+.vote-down-small{
+  float:left;
+  width:100%;
+  height:50%;
+}
+.vote-up-small:hover{
+  cursor:pointer;
+  text-decoration:none;
+  color:green;
+}
+.vote-down-small:hover{
+  cursor:pointer;
+  text-decoration:none;
+  color:red;
+}
+
+/* comments */
+.comment-line {
+
+}
+.comment-body {
+
+}
+.comment-spacer{
+  border:0px solid;
+  width:2%;
+  display:inline;
+  float:left; 
+}
+

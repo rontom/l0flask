@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+{% include "head.html" %}
+<script src="../static/javascripts/templates/post.js"></script><!--../-->
+
+<div class="content">
+  <!--  
+  <div class="vote-big">
+    <div class="vote-up"><a href="#" class="vote-up"><span class="glyphicon glyphicon-arrow-up"></span></a></div>
+    <div class="vote-down"><a href="#" class="vote-down"><span class="glyphicon glyphicon-arrow-down"></span></a></div>
+  </div>
+  -->
+
+  <div>
+    <strong>{{ post.name }}</strong>
+  </div>
+  <div>
+    {{ post.body }}
+  </div>
+</div>
+
+<div class="post-line">
+  <span class="post-author">来自 <a href="/u/{{ author.id }}"> {{ author.display_name }}</a>的提交</span>
+  <span class="post-timestamp">{{ momentjs(post.timestamp).fromNow() }}</span>
+  <input type="hidden" name="post_id" id="post_id" value="{{ post.id }}" />
+</div>
+
+{% if user != None and post!= None %}
+  <script src="../../static/javascripts/templates/partial/comment.js"></script>
+  {% include "partial/comment.html" %}
+{% endif %}
+
+<!-- comments -->
+<script src="../../static/javascripts/templates/partial/comments.js"></script>
+<div id="comments"></div>
+
+{% endblock %}

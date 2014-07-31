@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+{% include "head.html" %}
+{% if user != None %}
+
+    {% for message in form.post_name.errors %}
+      <div class="flash-error">{{ message }}</div>
+    {% endfor %}
+    {% for message in form.post_body.errors %}
+      <div class="flash-error">{{ message }}</div>
+    {% endfor %}
+    {% for message in form.clndr_datetime.errors %}
+      <div class="flash-error">{{ message }}</div>
+    {% endfor %}
+    {% if msg %}
+      <div class="flash-success">{{ msg }}
+      {% if post %}
+        <a href="/p/{{ post.id }}"> view</a>
+      {% endif %}
+      </div>
+    {% endif %}
+      
+  <div class="content">
+    <div class="input-line">
+      <div class="label-item">Submit Post</div>
+    </div>    
+    <form role="form" action="/submit" method="post" id="submit-form" class="form-horizontal">
+
+    
+    <div class="input-line">
+      <div class="label-item">date</div>
+      <div class="text-item">
+      {% include "partial/calendar.html" %}
+      <input type="hidden" name="clndr_datetime" id="clndr_datetime" value="" />
+      <script>
+        $('#clndr_datetime').val(get_current_unix_time());
+      </script>
+      </div>
+    </div>
+
+    <div class="input-line">
+      <div class="label-item">name</div>
+      <div class="text-item">
+        <input type="text" name="post_name" id="post_name" placeholder="name" class="form-control" required="required" value=""/>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="input-line">
+      <div class="label-item">body</div>
+      <div class="text-item">
+        <textarea name="post_body" id="post_body" placeholder="body" class="form-control" required="required" value=""></textarea>
+      </div>
+    </div>
+    
+    <div class="input-line">
+      <div class="label-item"></div>
+      <div class="text-item"><button type="submit" id="btn-submit" class="btn btn-default navbar-btn">submit</button></div>
+    </div>
+    
+    {{ form.hidden_tag() }}
+
+    </form>
+        <div class="clearfix"></div>
+  </div>
+  
+{% endif %}
+{% endblock %}

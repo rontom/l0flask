@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block content %}
+{% include "head.html" %}
+
+
+  {% if user == profile and user != None %}
+  {% for message in form.display_name.errors %}
+    <div class="flash-error">{{ message }}</div>
+  {% endfor %}
+  {% for message in form.email.errors %}
+    <div class="flash-error">{{ form.email.data }} {{ message }}</div>
+  {% endfor %}
+  {% for message in form.password.errors %}
+    <div class="flash-error">{{ message }}</div>
+  {% endfor %}
+  {% if msg %}
+    <div class="flash-success">{{ msg }}</div>
+  {% endif %}
+
+  <div class="content">
+    <div class="input-line">
+      <div class="label-item">编辑属性</div>
+    </div>    
+    <form role="form" action="/u/{{  user.id }}" method="post" id="profile-form" class="form-horizontal">
+    <input type="hidden" name="user_id" id="user_id" value="{{ user.id }}" />
+    <div class="input-line">
+      <div class="label-item">昵称</div>
+      <div class="text-item">
+        <input type="text" name="display_name" id="display_name" placeholder="display name" class="form-control" required="required" value="{{ user.display_name }}"/>
+      </div>
+    </div>
+    <div class="input-line">
+      <div class="label-item">邮箱</div>
+      <div class="text-item">
+        <input type="text" name="email" id="email" placeholder="输入你的邮箱" class="form-control" required="required" value="{{ user.email }}"/>
+      </div>
+    </div>
+    <div class="input-line">
+      <div class="label-item">密码</div>
+      <div class="text-item">
+        <input type="password" name="password" id="password" placeholder="输入你的密码" required="required" class="form-control" />
+      </div>
+    </div>
+    <div class="input-line">
+      <div class="label-item"></div>
+      <div class="text-item"></div>
+    </div>
+    
+    {{ form.hidden_tag() }}
+    <div class="input-line">
+      <div class="label-item"></div>
+      <div class="text-item"><button type="submit" id="btn-submit" class="btn btn-default navbar-btn">保存</button></div>
+    </div>
+    </form>
+    <div class="clearfix"></div>
+  </div>
+  {% endif %}
+
+<div class="clearfix"></div>
+
+  {% if profile != None %}
+  <div class="content">
+    <div class="input-line">
+      <div class="label-item">属性</div>
+    </div>
+    <div class="input-line">
+      <div class="label-item">昵称</div>
+      <div class="text-item">{{  profile.display_name }}</div>
+    </div>
+    <div class="input-line">
+      <div class="label-item">加入日期</div>
+      <div class="text-item">{{  momentjs(profile.timestamp).calendar() }}</div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  
+  <div class="clearfix"></div>
+  
+  <div class="content">
+    <div class="input-line">
+      <div class="label-item">评论</div>
+    </div>
+    {% for c in profile.comments %}
+      <div class="label-item">{{ momentjs(c.timestamp).fromnow() }} </div>
+      <div class="text-item">{{ c.body }}</div>
+    {% endfor %}
+    <div class="clearfix"></div>
+  </div>
+  {% endif %}
+
+{% endblock %}

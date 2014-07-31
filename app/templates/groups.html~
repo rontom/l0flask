@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+{% include "head.html" %}
+
+
+<div class="content">
+  <div class="input-line">
+    <div class="label-item">user groups</div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+  
+<div class="clearfix"></div>
+
+<div class="content">
+  <div class="input-line">
+    <div class="label-item">upcoming group posts</div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="content">
+  <div class="input-line">
+    <div class="label-item">join group</div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="content">
+  <div class="input-line">
+    <div class="label-item">create group</div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+{% endblock %}

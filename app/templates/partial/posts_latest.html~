@@ -1,0 +1,21 @@
+
+<div class="content">
+  <div class="input-line">
+    <div class="label-item">latest posts</div> 
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+{% for p in posts %}
+<div class="post-line">
+  <div class="post-item">
+    <span class="post-date" id="p_l_unix_ts_{{ p.id }}">{{ p.clndr_datetime }}</span>
+    <span class="post-name" title="{{ p.body }}">{{ p.name }} </span>
+  </div>
+  <div class="post-item">
+    <span class="post-author">submitted by<a href="/u/{{p.user_id }}"> {{ p.author.display_name }}</a></span>
+    <span class="post-link"><a href="/p/{{ p.id }}">comments</a></span>
+    <span class="post-timestamp" id="p_l_ts_{{ p.id }}">{{ p.timestamp }}</span>
+  </div>
+</div>
+{% endfor %}

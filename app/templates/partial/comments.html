@@ -1,0 +1,41 @@
+<div class="post-line" id="sort-line">
+  <span>依</span>
+  <span><a href="javascript:void(0)" onclick="sort('top')">最热</a></span>
+  <span><a href="javascript:void(0)" onclick="sort('new')">最新</a></span>
+  <span><a href="javascript:void(0)" onclick="sort('controversial')">最具有争议</a></span>
+  <span>排列</span>
+</div>
+<input type="hidden" name="sort_type" id="sort_type" value="" />
+<input type="hidden" name="sort_direction" id="sort_direction" value="" />
+
+<div id="list_comments">
+{% for c in comments %}
+  <div class="post-line" id="comment_{{ c.id }}">
+    <div class="vote-small">
+      <div class="vote-up-small">
+        <a href="javascript:void(0)" onclick="vote({{ c.id }}, 'up')" id="upvote" class="vote-up-small">&#x25B2;</a>
+      </div>
+      <div class="vote-down-small">
+        <a href="javascript:void(0)" onclick="vote({{ c.id }},'down')" id="downvote" class="vote-down-small">&#x25BC;</a>
+      </div>
+    </div>
+    
+    <div class="vote-small">
+      <div class="vote-up-small">{{ c.upvotes() }}</div>
+      <div class="vote-down-small">{{ c.downvotes() }}</div>
+    </div>
+    
+    <div class="comment-line">
+      <div class="comment-body">{{ c.body }}</div>
+      <div>
+          <span class="post-author">由<a href="/u/{{ c.user_id }}"> {{ c.author.display_name }}</a>提交的</span>
+          <span class="comment-spacer">&nbsp;</span>
+          {% if user != None %}
+            <span class="post-author"><a href="javascript:void(0)" onclick="reply({{ c.id }})" >回复</a></span>
+          {% endif %}
+          <span class="post-timestamp" id="c_ts_{{ c.id }}">{{ c.timestamp }}</span>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>

@@ -1,0 +1,59 @@
+/* 
+    Document   : style-responsive
+    Created on : 23-May-2013, 17:09:30
+    Author     : Aslam
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+/* Large desktop */
+@media (max-width: 1200px) { 
+
+    #home h1{margin: 10% auto 0px auto;}
+}
+
+@media (max-width: 979px){
+
+    .navbar-fixed-top{position: fixed; padding-right: 0px;}
+    .navbar-fixed-top .navbar-inner{padding: 0;}
+    .navbar .nav-collapse ul li{
+        display: block; 
+        padding-left: 30px;
+    }
+
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    .container{padding-left: 20px; padding-right: 20px;}
+    body{padding-left: 0; padding-right: 0;}
+    #home h1{margin: 10% auto 0px auto;}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+
+    .navbar-fixed-top{position: fixed; padding-right: 20px;}
+    .navbar .btn-navbar{margin-top: 15px;}
+    .flexslider h2{font-size: 30px; line-height: 35px; padding-top: 5px;}
+    .icon{font-size: 25px;}
+    #social_module  ul li{padding: 0 10px;}
+    #social_module {
+        padding: 10px 0 10px 0;
+    }
+    .center{text-align: center;}
+    #home h1{margin: 5% auto 0px auto;}
+    .icon-3x{font-size: 4em;}
+}
+
+@media (max-width: 320px){
+
+    #home h1{margin: 10% auto 0px auto;}
+    .flexslider h2{font-size: 30px; line-height: 35px; padding-top: 20px;}
+}

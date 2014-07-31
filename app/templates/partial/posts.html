@@ -1,0 +1,20 @@
+
+<div class="content">
+  <div class="input-line">
+    <div class="label-item" id="selected_post_date">文章</div> 
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+{% for p in posts %}
+<div class="post-line">
+  <div class="post-item">
+    <span class="post-name" title="{{ p.body }}">{{ p.name }} </span>
+  </div>
+  <div class="post-item">
+    <span class="post-author">由<a href="/u/{{p.user_id }}"> {{ p.author.display_name }}</a>提交的</span>
+    <span class="post-link"><a href="/p/{{ p.id }}">评论</a></span>
+    
+  </div>
+</div>
+{% endfor %}

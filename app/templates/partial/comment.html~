@@ -1,8 +1,0 @@
-<div class="post-line" id="submit-comment">
-  <div class="label-item">comment</div>
-  <div class="text-item">
-    <textarea name="comment_body" id="comment_body" placeholder="comment" class="form-control" required="required" value=""></textarea>
-  </div>
-  <div class="label-item"></div>
-  <div class="text-item"><button type="button" id="btn-submit-comment" class="btn btn-default navbar-btn">submit</button></div>
-</div>
